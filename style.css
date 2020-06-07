@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  font-family: 'Poppins', 'Roboto';
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  color: rgb(121, 121, 121); 
+}
+
+#form_container {
+  border: 1px solid rgb(177, 177, 177);
+  border-radius: 6px;
+  padding: 10px 10px 0 10px;
+  
+}
+.error, .success {
+  background: red;
+  color: #fff;
+  padding: 6px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'poppins', sans-serif;
+  font-size: 12px;
+}
+
+.success {
+  background: green;
+}
+
+.input_container {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 6px 0;
+  margin-bottom: 10px;
+}
+
+.input_container input {
+  border: 0;
+  outline: none;
+  font-size: 13px;
+}
+
+.input_container label {
+  background: rgba(197, 197, 197, 0.295);
+  padding: 6px;
+  border-right: 1px solid silver;
+  font-family: 'Roboto';
+ font-size: 15px;
+}
+
+.name_container, .age_container {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 6px;
+  margin-bottom: 10px;
+}
+
+ #submit {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 6px;
+  cursor: pointer;
+}
+
