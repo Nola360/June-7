@@ -1,3 +1,4 @@
+// Profile constructor
 function Profile(name, age) {
   this.name = name;
   this.age = age;
@@ -5,6 +6,7 @@ function Profile(name, age) {
 
 // UI constructor
 function UI() { }
+
 UI.prototype.clearFields = function () {
   const name = document.querySelector('#name').value = '';
   const age = document.querySelector('#age').value = '';
@@ -38,6 +40,26 @@ UI.prototype.showAlert = function (message, className) {
   }, 3000);
 }
 
+class Store {
+  static storeItems(profile) {
+
+    localStorage.setItem('profile', JSON.stringify(profile));
+
+
+    JSON.parse(localStorage.getItem('profile', profile));
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
 
 document.addEventListener('submit', function (e) {
   const name = document.querySelector('#name').value,
@@ -50,17 +72,17 @@ document.addEventListener('submit', function (e) {
   const profile = new Profile(name, age);
 
   if (name === '' || age === '') {
-
     ui.showAlert('Field cannot be empty', 'error');
-
   } else {
-
     // Add Profile
     ui.addProfile(profile);
+
     // Clears fields
     ui.clearFields();
 
     ui.showAlert('Success!', 'success');
+
+    Store.storeItems(profile);
   }
 
 
